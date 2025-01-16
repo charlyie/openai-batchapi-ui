@@ -4,7 +4,7 @@ A single page web-based to handle Batches from openAI
 
 ## Demo
 
-Available demo on codesandbox: https://codesandbox.io/p/devbox/5ks2lg
+Available demo on codesandbox: [https://codesandbox.io/p/devbox/5ks2lg](https://439xgk-3000.csb.app/)
 
 ## Screenshot
 
