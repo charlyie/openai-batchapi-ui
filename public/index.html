@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <title>OpenAI Batch Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body class="p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">
+        <div class="logo"></div>
+        <div>Batch Interface</div>
+      </h1>
+      <div class="flex flex-col items-end">
+        <label class="flex items-center space-x-2">
+          <span class="text-zinc-400">Auto-refresh</span>
+          <input type="checkbox" id="autoRefresh" checked class="toggle" />
+        </label>
+        <label class="flex items-center space-x-2">
+          <span class="text-zinc-400">Show only today's batches</span>
+          <input type="checkbox" id="last24Hours" class="toggle" />
+        </label>
+      </div>
+    </div>
+    <div class="mb-4 flex items-center align-middle	my-10">
+      <label for="apiKey" class="block flex-none w-fit mr-4">OpenAI API Key:</label>
+      <input type="password" id="apiKey" placeholder="Enter your API key" class="w-full flex-1 p-2 rounded border" />
+      <button onclick="fetchBatches()" class="px-4 py-2 button rounded w-fit ml-4">Get Batches</button>
+    </div>
+    <div id="batchesContainer" class="my-5"></div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <pre id="modal-content" class="hljs line-numbers"></pre>
+      </div>
+    </div>
+    <div id="toast-container" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 space-y-4"></div>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
